@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <tiny_adminhtml_tinybackend_index>
+	<reference name="content">
+	  <block type="tiny/adminhtml_tinybackend" name="tinybackend" template="tiny/tinybackend.phtml"/>
+	</reference>
+  </tiny_adminhtml_tinybackend_index>
+  <tiny_adminhtml_tinybackendnew_index>
+	<reference name="content">
+	  <block type="tiny/adminhtml_tinybackendnew" name="tinybackendnew" template="tiny/tinybackendnew.phtml"/>
+	</reference>
+  </tiny_adminhtml_tinybackendnew_index>
+</layout>

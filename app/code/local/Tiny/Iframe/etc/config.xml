@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Tiny_Iframe>
+      <version>0.0.4</version>
+    </Tiny_Iframe>
+  </modules>
+  <global>
+    <helpers>
+      <tiny>
+        <class>Tiny_Iframe_Helper</class>
+      </tiny>
+    </helpers>
+	<blocks>
+	  <tiny>
+		<class>Tiny_Iframe_Block</class>
+	  </tiny>
+	</blocks>
+  </global>
+  <admin>
+	<routers>
+	  <tiny>
+	    <use>admin</use>
+		<args>
+		  <module>Tiny_Iframe</module>
+		  <frontName>tiny</frontName>
+		</args>
+	  </tiny>
+	</routers>
+  </admin>
+  <adminhtml>
+	<menu>
+	  <tiny module="tiny">
+		<title>Tiny</title>
+		<sort_order>15</sort_order>
+		<children>
+		  <tinybackend module="tiny">
+			<title>Abrir</title>
+			<sort_order>0</sort_order>
+			<action>tiny/adminhtml_tinybackend</action>
+		  </tinybackend>
+		  <tinybackendnew module="tiny">
+			<title>Cadastrar-se</title>
+			<sort_order>1</sort_order>
+			<action>tiny/adminhtml_tinybackendnew</action>
+		  </tinybackendnew>
+		</children>
+	  </tiny>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<tiny translate="title" module="tiny">
+			  <title>Tiny</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+		       <tinybackend translate="title">
+			    <title>Tiny</title>
+		       </tinybackend>
+			  </children>
+			</tiny>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<tiny>
+		  <file>tiny.xml</file>
+		</tiny>
+	  </updates>
+	</layout>
+  </adminhtml>
+</config> 

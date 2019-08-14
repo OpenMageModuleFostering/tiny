@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Tiny",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License-(GPL)",
+    "homepage": "",
+    "description": "Importa Pedidos, Produtos e Pode ser Acessado Pelo menu do Painel.",
+    "authors": [
+    {
+        "name": "XDMIX.com.br",
+        "email": "clarck.1@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
