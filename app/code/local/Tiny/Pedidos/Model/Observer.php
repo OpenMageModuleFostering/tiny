@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-define("URL_TINY", "http://www.tiny.com.br/tinyerp/api2/recepcao.magento.api.php");
+define("URL_TINY", "http://www.tiny.com.br/api2/recepcao.magento.api.php");
 
 class Tiny_Pedidos_Model_Observer {
 

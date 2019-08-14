@@ -2,10 +2,10 @@
 <config>
     <modules>
         <Tiny_Pedidos>
-            <version>0.0.9</version>
+            <version>0.1.0</version>
         </Tiny_Pedidos>
         <Tiny_Pedidos_Pagos>
-            <version>0.0.9</version>
+            <version>0.1.0</version>
         </Tiny_Pedidos_Pagos>
     </modules>
     <global>
