@@ -2,7 +2,7 @@
 <config>
   <modules>
     <Tiny_Iframe>
-      <version>0.0.4</version>
+      <version>0.0.6</version>
     </Tiny_Iframe>
   </modules>
   <global>

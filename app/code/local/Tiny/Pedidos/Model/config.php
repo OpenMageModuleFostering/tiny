@@ -2,7 +2,7 @@
 
 /*
  * Tiny Magento: Integration Module
- * Copyright (C) 2012  Tiny Software
+ * Copyright (C) 2013  Tiny Software
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

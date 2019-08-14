@@ -2,14 +2,11 @@
 <config>
     <modules>
         <Tiny_Pedidos>
-            <version>0.0.4</version>
+            <version>0.0.6</version>
         </Tiny_Pedidos>
         <Tiny_Pedidos_Pagos>
-            <version>0.0.4</version>
+            <version>0.0.6</version>
         </Tiny_Pedidos_Pagos>
-        <Tiny_Pedidos_Criacao_Invoice>
-            <version>0.0.4</version>
-        </Tiny_Pedidos_Criacao_Invoice>
     </modules>
     <global>
         <models>
@@ -21,11 +18,6 @@
             <Tiny_Pedidos_Pagos>
                 <class>Tiny_Pedidos_Model</class>
             </Tiny_Pedidos_Pagos>
-        </models>
-        <models>
-            <Tiny_Pedidos_Criacao_Invoice>
-                <class>Tiny_Pedidos_Model</class>
-            </Tiny_Pedidos_Criacao_Invoice>
         </models>
         <events>
             <sales_model_service_quote_submit_success>
@@ -46,15 +38,6 @@
                     </Tiny_Pedidos_Pagos>
                 </observers>
             </sales_order_payment_pay>
-	    <sales_order_invoice_register>
-                <observers>
-                    <Tiny_Pedidos_Criacao_Invoice>
-                        <class>Tiny_Pedidos/observer</class>
-                        <method>inserePedidoPeloInvoice</method>
-                        <type>singleton</type>
-                    </Tiny_Pedidos_Criacao_Invoice>
-                </observers>
-            </sales_order_invoice_register>
         </events>
     </global>
 </config>
