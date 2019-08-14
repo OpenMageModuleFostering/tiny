@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Tiny</name>
-    <version>0.0.7</version>
+    <version>0.0.8</version>
     <stability>stable</stability>
     <license>GNU General Public License (GPL)</license>
     <channel>community</channel>
@@ -13,9 +13,9 @@ Importa&#xE7;&#xE3;o de Produtos.&#xD;
 Menu Tiny com janela para para o Sistema Tiny.</description>
     <notes>Importa Pedidos, Produtos e Acesso Pelo menu do Painel.</notes>
     <authors><author><name>XDMIX.com.br</name><user>ClarckBR</user><email>clarck.1@gmail.com</email></author><author><name>tiny.com.br</name><user>marcosGrzeca</user><email>marcos@tiny.com.br</email></author></authors>
-    <date>2013-02-26</date>
-    <time>22:18:06</time>
-    <contents><target name="magelocal"><dir name="Tiny"><dir name="Iframe"><dir name="Block"><dir name="Adminhtml"><file name="Tinybackend.php" hash="ecf98e41f9335db02d7a2b780017d355"/><file name="Tinybackendnew.php" hash="fe03059e072a3ac07d38be59035b7f0b"/></dir></dir><dir name="Helper"><file name="Data.php" hash="89f964f9eae39d4b89861c4af449f27a"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="TinybackendController.php" hash="6730806216146eb04e89c12e8c757d6f"/><file name="TinybackendnewController.php" hash="6047fe80abd6eccd543ac5959fcc6bd1"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="f6d0d5eb762fa72b2c3acb17f0dce47b"/><file name="config.xml" hash="5b7ee369d2e2f9c5cba76a7bcf2fe611"/><file name="system.xml" hash="d2746f02689687793af09d08cbfd6b80"/></dir></dir><dir name="Pedidos"><dir name="Model"><file name="Observer.php" hash="5ef302545e20649861c0da6a8a4d8211"/><file name="config.php" hash="f5117f0fb77f7c41bd768c6214f2d493"/></dir><dir name="etc"><file name="config.xml" hash="d4ccc5f9965add391148e9fa49bcb42d"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="tiny.xml" hash="335baf6004b5b0afe2d19f0a752bbec6"/></dir><dir name="template"><dir name="tiny"><file name="author.phtml" hash="698dc19d489c4e4db73e28a713eab07b"/><file name="tinybackend.phtml" hash="a52bca8a8b3f7de6281a1305476f5d28"/><file name="tinybackendnew.phtml" hash="3c76a75bb7adb8b7223c2faa331579a4"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Tiny.xml" hash="468d04f14f2ac16ee21d0cb863c10137"/></dir></target></contents>
+    <date>2013-02-27</date>
+    <time>14:32:23</time>
+    <contents><target name="magelocal"><dir name="Tiny"><dir name="Iframe"><dir name="Block"><dir name="Adminhtml"><file name="Tinybackend.php" hash="ecf98e41f9335db02d7a2b780017d355"/><file name="Tinybackendnew.php" hash="fe03059e072a3ac07d38be59035b7f0b"/></dir></dir><dir name="Helper"><file name="Data.php" hash="89f964f9eae39d4b89861c4af449f27a"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="TinybackendController.php" hash="6730806216146eb04e89c12e8c757d6f"/><file name="TinybackendnewController.php" hash="6047fe80abd6eccd543ac5959fcc6bd1"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="f6d0d5eb762fa72b2c3acb17f0dce47b"/><file name="config.xml" hash="10bc82ff719a7be14d9186bc58d62c42"/><file name="system.xml" hash="11834a908634802b128bf19464ff1f72"/></dir></dir><dir name="Pedidos"><dir name="Model"><file name="Observer.php" hash="5ef302545e20649861c0da6a8a4d8211"/><file name="config.php" hash="9ed1451ca8d2d4cc00cf38bb1f82dd7c"/></dir><dir name="etc"><file name="config.xml" hash="63cb7a978e6cfe814d51d7accc842737"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="tiny.xml" hash="335baf6004b5b0afe2d19f0a752bbec6"/></dir><dir name="template"><dir name="tiny"><file name="author.phtml" hash="698dc19d489c4e4db73e28a713eab07b"/><file name="tinybackend.phtml" hash="a52bca8a8b3f7de6281a1305476f5d28"/><file name="tinybackendnew.phtml" hash="3c76a75bb7adb8b7223c2faa331579a4"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Tiny.xml" hash="468d04f14f2ac16ee21d0cb863c10137"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.0.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

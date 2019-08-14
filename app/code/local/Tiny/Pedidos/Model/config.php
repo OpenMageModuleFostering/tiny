@@ -1,5 +1,4 @@
 <?
-
 /*
  * Tiny Magento: Integration Module
  * Copyright (C) 2013  Tiny Software
@@ -17,12 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 define("URL_TINY", "http://www.tiny.com.br/api2/recepcao.magento.api.php");
 define("APIKEY_TINY", "");
-
 //altere o valor desta constante para N caso queira desativá-la
-define("INTEGRACAO_NA_CRIACAO_DO_PEDIDO_ATIVA", "S");
+define("INTEGRACAO_NA_CRIACAO_DO_PEDIDO_ATIVA", "N");
 //altere o valor desta constante para N caso queira desativá-la
-define("INTEGRACAO_NA_CRIACAO_DA_FATURA_ATIVA", "S");
+define("INTEGRACAO_NA_CRIACAO_DA_FATURA_ATIVA", "N");
 ?>
