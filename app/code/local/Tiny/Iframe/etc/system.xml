@@ -23,11 +23,64 @@
     				 	<div>
                             <br style="clear: both;"/>
                             <div style="width: 439px; height: 40px; display: block; float: left; padding-left: 35px;">
-                                <label style="font-size: 22px">Vers&atilde;o: <strong>0.0.8</strong></label>
+                                <label style="font-size: 22px">Vers&atilde;o: <strong>0.0.9</strong></label>
                             </div>
                             <br style="clear: both;"/>
                             <hr>
                             <br /><br />
+    				 	</div>
+    				 	]]>
+					</comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable_tiny translate="label comment">
+							<label>Habilitar Tiny</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_tiny>
+                        <apiKey_tiny translate="label comment">
+							<label>ApiKey</label>
+                            <frontend_type>text</frontend_type>
+					        <comment>ApiKey Tiny encontrada no seu painel Tiny em: Preferências -> Configuração de Integração -> ApiKey</comment>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </apiKey_tiny>
+                        <exportar_Tiny translate="label comment">
+							<label>Exportar quando</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Tiny_Pedidos_Model_OpcoesTiny</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </exportar_Tiny>
+                        <destino_Tiny translate="label comment">
+							<label>Exportar para</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Tiny_Pedidos_Model_DestinoTiny</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </destino_Tiny>
+                    </fields>
+                </general>
+                <about translate="label">
+                    <label>Como Funciona?</label>
+					<comment>
+    				 	<![CDATA[
+    				 	<div>
+                            <br style="clear: both;"/>
     					 	<p>
     						 	<h2>Mantido por: <a href="http://www.tiny.com.br/" target="_blank">Tiny</a> e <a href="http://www.xdmix.com.br/" target="_blank">XDMIX</a></h2><br />
 								Desenvolvedores:<br />
@@ -90,26 +143,15 @@
 								 <img src="http://www.tiny.com.br/manuais/images/magento_tiny_3.png" width="600" height="598" style="border:solid 1px #ccc;" /><br />
 								 Após salvá-lo aparecerá em notas fiscais (Vendas->Notas Fiscais).<br />
 								 </div>
-                            <br /><br /><hr>
+                            <br /><br />
     				 	</div>
     				 	]]></comment>
                     <frontend_type>text</frontend_type>
-                    <sort_order>10</sort_order>
+                    <sort_order>2</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
-                    <fields>
-                        <enable_tiny translate="label comment">
-							<label>Versão 0.0.8</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>1</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </enable_tiny>
-                    </fields>
-                </general>
+                </about>
             </groups>
         </tiny>
     </sections>

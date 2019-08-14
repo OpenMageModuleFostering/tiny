@@ -2,7 +2,7 @@
 <config>
   <modules>
     <Tiny_Iframe>
-      <version>0.0.8</version>
+      <version>0.0.9</version>
     </Tiny_Iframe>
   </modules>
   <global>
@@ -88,6 +88,9 @@
         <tiny>
             <general>
                 <enable_tiny>1</enable_tiny>
+                <apiKey_tiny></apiKey_tiny>
+                <exportar_Tiny>0</exportar_Tiny>
+                <destino_Tiny>0</destino_Tiny>
             </general>
         </tiny>
   </default>

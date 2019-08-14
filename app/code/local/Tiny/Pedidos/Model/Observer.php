@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-require_once("config.php");
+define("URL_TINY", "http://www.tiny.com.br/tinyerp/api2/recepcao.magento.api.php");
 
 class Tiny_Pedidos_Model_Observer {
 
@@ -28,7 +28,15 @@ class Tiny_Pedidos_Model_Observer {
      */
 
 	public function inserePedido(Varien_Event_Observer $observer) {
-		if (INTEGRACAO_NA_CRIACAO_DO_PEDIDO_ATIVA == "S") {
+		
+		$exportarQuando = Mage::getStoreConfig('tiny/general/exportar_Tiny');
+		/*
+		 array('value' => 0, 'label'=>Mage::helper('adminhtml')->__('Não exportar')),
+            array('value' => 1, 'label'=>Mage::helper('adminhtml')->__('Quando o pedido for incluído')),
+            array('value' => 2, 'label'=>Mage::helper('adminhtml')->__('Quando o pedido for faturado'))
+		 */		
+		
+		if ($exportarQuando == 1) {
 			try {		
 				$orderId = $observer->getEvent()->getOrder()->getIncrementId();
 				$this->exportarPedido($orderId);
@@ -37,32 +45,47 @@ class Tiny_Pedidos_Model_Observer {
 		}
 	}
 
-	public function exportarPedido($num, $pedidoNota = "P") {
-		try {		
-
-			$url = URL_TINY;
-			$data = 'apiKey=' . APIKEY_TINY .'&tipo=' . $pedidoNota . '&numeroPedido=' . $num;
-
-			$optional_headers = null;
-			$params = array('http' => array('method' => 'POST', 'content' => $data));
-			if ($optional_headers !== null) {
-				$params['http']['header'] = $optional_headers;
+	public function exportarPedido($num) {
+		
+		$apiKey = Mage::getStoreConfig('tiny/general/apiKey_tiny');
+		$exportarQuando = Mage::getStoreConfig('tiny/general/exportar_Tiny');
+		$destino = Mage::getStoreConfig('tiny/general/destino_Tiny');
+	
+		if ($destino == 1) {
+			$pedidoNota = "N";	
+		} else {
+			$pedidoNota = "P";
+		}
+		
+		if ($exportarQuando != 0) {
+		
+			try {		
+	
+				$url = URL_TINY;
+				$data = 'apiKey=' . $apiKey .'&tipo=' . $pedidoNota . '&numeroPedido=' . $num;
+	
+				$optional_headers = null;
+				$params = array('http' => array('method' => 'POST', 'content' => $data));
+				if ($optional_headers !== null) {
+					$params['http']['header'] = $optional_headers;
+				}
+				$ctx = stream_context_create($params);
+				$fp = @fopen($url, 'rb', false, $ctx);
+				if (!$fp) {
+					throw new Exception("Problema com $url, $php_errormsg");
+				}
+				$response = @stream_get_contents($fp);
+				if ($response === false) {
+					throw new Exception("Problema obtendo retorno de $url, $php_errormsg");
+				}
+			} catch(Exception $e) {
 			}
-			$ctx = stream_context_create($params);
-			$fp = @fopen($url, 'rb', false, $ctx);
-			if (!$fp) {
-				throw new Exception("Problema com $url, $php_errormsg");
-			}
-			$response = @stream_get_contents($fp);
-			if ($response === false) {
-				throw new Exception("Problema obtendo retorno de $url, $php_errormsg");
-			}
-		} catch(Exception $e) {
 		}
 	}	
 
 	public function inserePedidoPeloPagamento(Varien_Event_Observer $observer) {
-		if (INTEGRACAO_NA_CRIACAO_DA_FATURA_ATIVA == "S") {
+		$exportarQuando = Mage::getStoreConfig('tiny/general/exportar_Tiny');
+		if ($exportarQuando == 2) {
 			try {		
 				$orderId = $observer->getPayment()->getOrder()->getIncrementId();
 				$this->exportarPedido($orderId);
@@ -76,7 +99,7 @@ class Tiny_Pedidos_Model_Observer {
 			$order = $observer->getEvent()->getOrder();
 		        $orderId = $order->getRealOrderId();
 			//$orderId = $observer->getPayment()->getOrder()->getIncrementId();
-			$this->exportarPedido($orderId);
+			//$this->exportarPedido($orderId);
 		} catch(Exception $e) {
 		}
 	}
