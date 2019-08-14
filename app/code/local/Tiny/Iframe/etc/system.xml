@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <tinyt translate="label" module="tiny">
+            <label>Tiny</label>
+            <sort_order>350</sort_order>
+        </tinyt>
+    </tabs>
+    <sections>
+        <tiny translate="label" module="tiny">
+            <label>Tiny ERP</label>
+            <tab>tinyt</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>150</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+					<comment>
+    				 	<![CDATA[
+    				 	<div>
+                            <br style="clear: both;"/>
+                            <div style="width: 439px; height: 40px; display: block; float: left; padding-left: 35px;">
+                                <label style="font-size: 22px">Vers&atilde;o: <strong>0.0.5</strong></label>
+                            </div>
+                            <br style="clear: both;"/>
+                            <hr>
+                            <br /><br />
+    					 	<p>
+    						 	<h2>Mantido por: <a href="http://www.tiny.com.br/" target="_blank">Tiny</a> e <a href="http://www.xdmix.com.br/" target="_blank">XDMIX</a></h2><br />
+								Desenvolvedores:<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiny: Marcos Augusto Grzeça<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XDMIX: Leandro Miranda Machado
+    						</p>
+                            <br />
+                                 <h3>Como Funciona?</h3><br />
+								 <div style="padding-left:10px;">
+                                 É bem simples.<br />
+                                 Todos os produtos e pedidos cadastrados no Magento podem ser importados direto do Tiny.<br />
+                                 O estoque entre o Magento e o Tiny podem ser sincronizado automaticamente.<br />
+                                 Os pedidos importados pelo Tiny salva o cliente e os produtos automaticamente e dá baixa no estoque.<br />
+                                 Com os pedidos importados pelo Tiny pode-se gerar NFe e controlar o financeiro.<br />
+                                 Veja abaixo como se faz a integração e um exemplo dessa poderosa união: Magento e Tiny.
+								 </div>
+                            <br /><br />
+                                 <h3>Como Integrar?</h3>
+								 <div style="padding-left:10px;"><br />
+								 <strong>1&deg; Passo - Configurar o Magento</strong></strong><br /><br />
+								 No Magento, deve ser criado um usuário de webservices:
+								 <ul>
+								 <li>&bull; Acessar o painel de administração da sua loja Magento.</li>
+								 <li>&bull; Criar um papel em "Sistema->Web Services->Papéis/Níveis de acesso</li>
+								 <li>&bull; Adicionar Novo Papel</li>
+								 <li>&bull; Criar um usuário com permissão de webservices em "Sistema->Web Services->Usuários</li>
+								 <li>&bull; Vincular o usuário ao papel também em "Sistema->Web Services->Usuários".</li>
+								 </ul>
+								 <img src="http://www.tiny.com.br/manuais/images/Magento2.png" width="600" height="359" style="border:solid 1px #ccc;" /><br /><br />
+								 Também é necessário criar um usuário e vinculá-lo ao Papel/Nível de acesso previamente criado<br />
+								 através de "Sistema->Web Services->Usuários".<br />
+								 <img src="http://www.tiny.com.br/manuais/images/Magento3.png" width="600" height="359" style="border:solid 1px #ccc;" /><br /><br />
+								 Para vinculá-lo a um papel, clique em "Papel do Usuário/Nível de acesso",<br />
+								 localizado ao lado esquerdo do cadastro de novo usuário e escolha uma definição para o usuário cadastrado.<br />
+								 <img src="http://www.tiny.com.br/manuais/images/Magento4.png" width="600" height="359" style="border:solid 1px #ccc;" /><br /><br /><br />
+								 <strong>2&deg; Passo - Configurar o Tiny</strong></strong><br /><br />
+								 Após a configuração no Magento, é necessário fazer a configuração no Tiny.
+								 <ul>
+								 <li>&bull; Acesse "Preferências"</li>
+								 <li>&bull; Configurações de Integração com Magento</li>
+								 </ul>
+								 <img src="http://www.tiny.com.br/manuais/images/magento_tiny_1.png" width="351" height="109" style="border:solid 1px #ccc;" /><br /><br />
+								 Após a configuração no Magento, é necessário fazer a configuração no Tiny.
+								 <ul>
+								 <li>&bull; No campo "URL da loja", digite a url da sua loja, o usuário que foi criado anteriormente,<br />
+								 deve ser preenchido nas configurações de integração com Magento, juntamente com sua respectiva senha.</li>
+								 <li>&bull; Clique em testar para verificar se sua configuração está correta.</li>
+								 <li>&bull; Salve as configurações.</li>
+								 </ul>
+								 <img src="http://www.tiny.com.br/manuais/images/magento_tiny_2.png" width="450" height="383" style="border:solid 1px #ccc;" /><br />
+								 Observação: Antes do site de sua loja, não esqueça de usar http://<br /><br /><br />
+								 <strong>3&deg; Passo - Utilização: Como importar pedidos no Tiny?</strong></strong><br /><br />
+								 Acesse o Tiny.<br />
+								 Entre na seção "Vendas"<br />
+								 Acesse o item "Pedidos do Magento"<br />
+								 <img src="http://www.tiny.com.br/manuais/images/Magento9.png" width="600" height="261" style="border:solid 1px #ccc;" /><br /><br />
+								 Clique em ->"Importar Pedido"<br />
+								 <img src="http://www.tiny.com.br/manuais/images/Magento10.png" width="600" height="468" style="border:solid 1px #ccc;" /><br /><br />
+								 Serão exibidos os dados do pedido<br />
+								 <img src="http://www.tiny.com.br/manuais/images/magento_tiny_3.png" width="600" height="598" style="border:solid 1px #ccc;" /><br />
+								 Após salvá-lo aparecerá em notas fiscais (Vendas->Notas Fiscais).<br />
+								 </div>
+                            <br /><br /><hr>
+    				 	</div>
+    				 	]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <extensions translate="label comment">
+							<label>Versão 0.0.5</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </extensions>
+                    </fields>
+                </general>
+            </groups>
+        </tiny>
+    </sections>
+</config>
