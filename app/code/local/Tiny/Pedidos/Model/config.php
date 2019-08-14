@@ -19,7 +19,7 @@
  */
 
 define("URL_TINY", "http://www.tiny.com.br/api2/recepcao.magento.api.php");
-define("APIKEY_TINY", "e4db90d728309c1e24c0d5a180492151afc5e229");
+define("APIKEY_TINY", "");
 
 //altere o valor desta constante para N caso queira desativá-la
 define("INTEGRACAO_NA_CRIACAO_DO_PEDIDO_ATIVA", "S");
