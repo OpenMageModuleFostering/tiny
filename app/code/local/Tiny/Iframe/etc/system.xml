@@ -109,13 +109,13 @@
 								 <li>&bull; Criar um usuário com permissão de webservices em "Sistema->Web Services->Usuários</li>
 								 <li>&bull; Vincular o usuário ao papel também em "Sistema->Web Services->Usuários".</li>
 								 </ul>
-								 <img src="http://www.tiny.com.br/manuais/images/Magento2.png" width="600" height="359" style="border:solid 1px #ccc;" /><br /><br />
+								 <img src="https://tiny.com.br/help-content/images/ec-magento-3.png" width="600" height="359" style="border:solid 1px #ccc;" /><br /><br />
 								 Também é necessário criar um usuário e vinculá-lo ao Papel/Nível de acesso previamente criado<br />
 								 através de "Sistema->Web Services->Usuários".<br />
-								 <img src="http://www.tiny.com.br/manuais/images/Magento3.png" width="600" height="359" style="border:solid 1px #ccc;" /><br /><br />
+								 <img src="https://tiny.com.br/help-content/images/ec-magento-4.png" width="600" height="359" style="border:solid 1px #ccc;" /><br /><br />
 								 Para vinculá-lo a um papel, clique em "Papel do Usuário/Nível de acesso",<br />
 								 localizado ao lado esquerdo do cadastro de novo usuário e escolha uma definição para o usuário cadastrado.<br />
-								 <img src="http://www.tiny.com.br/manuais/images/Magento4.png" width="600" height="359" style="border:solid 1px #ccc;" /><br /><br /><br />
+								 <img src="https://tiny.com.br/help-content/images/ec-magento-4.png" width="600" height="359" style="border:solid 1px #ccc;" /><br /><br /><br />
 								 <strong>2&deg; Passo - Configurar o Tiny</strong></strong><br /><br />
 								 Após a configuração no Magento, é necessário fazer a configuração no Tiny.
 								 <ul>
